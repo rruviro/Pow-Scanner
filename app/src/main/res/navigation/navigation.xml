@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/logoFragment">
+
+    <fragment
+        android:id="@+id/HFragment"
+        android:name="com.application.qrscanner.HFragment"
+        android:label="fragment_h"
+        tools:layout="@layout/fragment_h" >
+        <action
+            android:id="@+id/action_HFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_HFragment_to_generateFragment"
+            app:destination="@id/generateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/logoFragment"
+        android:name="com.application.qrscanner.LogoFragment"
+        android:label="fragment_logo"
+        tools:layout="@layout/fragment_logo" >
+        <action
+            android:id="@+id/action_logoFragment_to_HFragment"
+            app:destination="@id/HFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.application.qrscanner.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_HFragment"
+            app:destination="@id/HFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/generateFragment"
+        android:name="com.application.qrscanner.GenerateFragment"
+        android:label="fragment_generate"
+        tools:layout="@layout/fragment_generate" >
+        <action
+            android:id="@+id/action_generateFragment_to_HFragment"
+            app:destination="@id/HFragment" />
+    </fragment>
+</navigation>

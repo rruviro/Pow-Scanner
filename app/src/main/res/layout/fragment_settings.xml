@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".SettingsFragment">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/Back"
+        android:layout_width="35dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="-30dp"
+        android:background="@drawable/panel"
+        android:backgroundTint="#000000"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:text="Settings"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toEndOf="@+id/Back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.178" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:text="Customize your own Settings"
+        android:textColor="@color/black"
+        android:alpha="0.6"
+        android:textSize="10dp"
+        app:layout_constraintStart_toEndOf="@+id/Back"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ImageView
+        android:layout_width="76dp"
+        android:layout_height="64dp"
+        android:src="@drawable/pick"
+        android:layout_marginBottom="0.2dp"
+        android:layout_marginEnd="-6.9dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/Theme"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/zxing_transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/imgTheme"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/theme"
+                app:layout_constraintBottom_toBottomOf="@+id/Theme"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/Theme"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/txtTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Theme"
+                android:textSize="16dp"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@+id/imgTheme"
+                app:layout_constraintTop_toTopOf="@+id/Theme" />
+
+            <TextView
+                android:id="@+id/usedTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="System default"
+                android:textColor="@color/white"
+                android:alpha="0.7"
+                android:textSize="13dp"
+                app:layout_constraintStart_toEndOf="@+id/imgTheme"
+                app:layout_constraintTop_toBottomOf="@+id/txtTheme" />
+
+            <Button
+                android:id="@+id/Beep"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/zxing_transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Theme" />
+
+            <ImageView
+                android:id="@+id/imgBeep"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/volume_on"
+                app:layout_constraintBottom_toBottomOf="@+id/Beep"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/Beep"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/txtBeep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Beep"
+                android:textSize="16dp"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@+id/imgBeep"
+                app:layout_constraintTop_toTopOf="@+id/Beep" />
+
+            <TextView
+                android:id="@+id/usedBeep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Sound Effects"
+                android:textColor="@color/white"
+                android:alpha="0.7"
+                android:textSize="13dp"
+                app:layout_constraintStart_toEndOf="@+id/imgBeep"
+                app:layout_constraintTop_toBottomOf="@+id/txtBeep" />
+
+            <CheckBox
+                android:id="@+id/beepi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:buttonTint="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/Beep"
+                app:layout_constraintEnd_toEndOf="@+id/Beep"
+                app:layout_constraintTop_toTopOf="@+id/Beep" />
+
+            <Button
+                android:id="@+id/Vibrate"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/zxing_transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Beep" />
+
+            <ImageView
+                android:id="@+id/imgVibrate"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/vibrate"
+                app:layout_constraintBottom_toBottomOf="@+id/Vibrate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/Vibrate"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/txtVibrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Vibrate"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="@+id/Vibrate"
+                app:layout_constraintStart_toEndOf="@+id/imgVibrate"
+                app:layout_constraintTop_toTopOf="@+id/Vibrate" />
+
+            <CheckBox
+                android:id="@+id/vibratie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:buttonTint="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/Vibrate"
+                app:layout_constraintEnd_toEndOf="@+id/Vibrate"
+                app:layout_constraintTop_toTopOf="@+id/Vibrate" />
+
+            <Button
+                android:id="@+id/History"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/zxing_transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Vibrate" />
+
+            <ImageView
+                android:id="@+id/imghistory"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/historywhite"
+                app:layout_constraintBottom_toBottomOf="@+id/History"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/History"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/txthistor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Add scans to history"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="@+id/History"
+                app:layout_constraintStart_toEndOf="@+id/imghistory"
+                app:layout_constraintTop_toTopOf="@+id/History" />
+
+            <CheckBox
+                android:id="@+id/histories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:buttonTint="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/History"
+                app:layout_constraintEnd_toEndOf="@+id/History"
+                app:layout_constraintTop_toTopOf="@+id/History" />
+
+            <Button
+                android:id="@+id/OpenUrl"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/zxing_transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/History" />
+
+            <ImageView
+                android:id="@+id/imgOpenUrl"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/link"
+                app:layout_constraintBottom_toBottomOf="@+id/OpenUrl"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/OpenUrl"
+                app:layout_constraintVertical_bias="0.542" />
+
+            <TextView
+                android:id="@+id/txtOpenUrl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Add scans to history"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@+id/imgOpenUrl"
+                app:layout_constraintTop_toTopOf="@+id/OpenUrl" />
+
+            <TextView
+                android:id="@+id/usedOpenUrl"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:alpha="0.7"
+                android:layout_marginStart="15dp"
+                android:text="Automatically launch websites upon scanning QR codes containing URLs."
+                android:textColor="@color/white"
+                android:textSize="11dp"
+                app:layout_constraintStart_toEndOf="@+id/imgOpenUrl"
+                app:layout_constraintTop_toBottomOf="@+id/txtOpenUrl" />
+
+            <CheckBox
+                android:id="@+id/urls"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/OpenUrl"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/OpenUrl" />
+
+            <Button
+                android:id="@+id/Camera"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/zxing_transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/OpenUrl" />
+
+            <ImageView
+                android:id="@+id/imgCamera"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/camera"
+                app:layout_constraintBottom_toBottomOf="@+id/Camera"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/Camera"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/txtCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Camera"
+                android:textSize="16dp"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@+id/imgCamera"
+                app:layout_constraintTop_toTopOf="@+id/Camera" />
+
+            <TextView
+                android:id="@+id/usedCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Main Camera - recommended"
+                android:textColor="@color/white"
+                android:alpha="0.7"
+                android:textSize="13dp"
+                app:layout_constraintStart_toEndOf="@+id/imgCamera"
+                app:layout_constraintTop_toBottomOf="@+id/txtCamera" />
+
+            <Button
+                android:id="@+id/Share"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="100dp"
+                android:background="@color/zxing_transparent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Camera" />
+
+            <ImageView
+                android:id="@+id/imgShare"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/share"
+                app:layout_constraintBottom_toBottomOf="@+id/Share"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/Share"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/txtShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Share"
+                android:textSize="16dp"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@+id/imgShare"
+                app:layout_constraintTop_toTopOf="@+id/Share" />
+
+            <TextView
+                android:id="@+id/usedShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Assist us in expanding our business."
+                android:textColor="@color/white"
+                android:alpha="0.7"
+                android:textSize="13dp"
+                app:layout_constraintStart_toEndOf="@+id/imgShare"
+                app:layout_constraintTop_toBottomOf="@+id/txtShare" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
